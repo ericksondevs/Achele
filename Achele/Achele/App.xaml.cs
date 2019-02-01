@@ -14,7 +14,7 @@ namespace Achele
 			InitializeComponent();
 
 
-			MainPage = new WelcomePage();
+			MainPage = new ConfigurationPage();
 		}
 
 		protected override void OnStart ()
