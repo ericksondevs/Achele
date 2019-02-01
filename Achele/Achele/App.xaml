@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Achele.App">
+	<Application.Resources>
+        <StyleSheetExtension Source="/Assets/CustomStyles.css"></StyleSheetExtension>
+		<ResourceDictionary>
+            
+            <OnPlatform x:Key="FontFamilyName" x:TypeArguments="x:String" iOS="MarkerFelt-Thin" Android="Roboto" WinPhone="Segoe UI" />
+            <Style x:Key="FontLabel" TargetType="Label">
+                <Setter Property="FontFamily" Value="{DynamicResource FontFamilyName}" />
+            </Style>
+            
+            <!--Global Styles-->
+            <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
+                <Setter Property="BarTextColor" Value="White" />
+            </Style>
+        </ResourceDictionary>
+	</Application.Resources>
+</Application>
