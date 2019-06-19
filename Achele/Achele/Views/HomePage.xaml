@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Achele.Views.HomePage"
+             xmlns:pages="clr-namespace:Achele.Views"
+             xmlns:cardView="clr-namespace:CardView;assembly=CardView" >
+
+    <ContentPage.Content>
+        <StackLayout Margin="15,15,15,15" >
+
+            <cardView:CardView Padding="0,15,0,0" IsClippedToBounds="True" CardViewHeightRequest="80" CardViewOutlineColor="Gray"  CardViewOutlineColorThickness="1" CardViewHasShadow="True" >
+                <cardView:CardView.CardViewContent >
+                    <StackLayout Padding="5" BackgroundColor="White"   WidthRequest="390"  >
+                        <Label  BackgroundColor="White" VerticalOptions="CenterAndExpand" Text="HouseHold" FontSize="20" TextColor="#ACACAC"   HorizontalOptions="StartAndExpand" ></Label>
+                        <Label   BackgroundColor="White" VerticalOptions="CenterAndExpand"  Text="Remaining balance | 88%" FontSize="11" TextColor="#ACACAC"  HorizontalOptions="StartAndExpand" ></Label>
+                        <ProgressBar  ProgressColor="#66B6B6" VerticalOptions="EndAndExpand" Progress="0.6" Scale="1"  ></ProgressBar>
+                    </StackLayout>
+                </cardView:CardView.CardViewContent>
+            </cardView:CardView>
+
+            <cardView:CardView  Padding="0,15,0,0" IsClippedToBounds="True" CardViewHeightRequest="80" CardViewOutlineColor="Gray"  CardViewOutlineColorThickness="1" CardViewHasShadow="True" >
+                <cardView:CardView.CardViewContent >
+                    <StackLayout Padding="5" BackgroundColor="White"   WidthRequest="390"  >
+                        <Label  BackgroundColor="White" VerticalOptions="CenterAndExpand" Text="HouseHold" FontSize="20" TextColor="#ACACAC"   HorizontalOptions="StartAndExpand" ></Label>
+                        <Label  BackgroundColor="White" VerticalOptions="CenterAndExpand"  Text="Remaining balance | 88%" FontSize="11" TextColor="#ACACAC"  HorizontalOptions="StartAndExpand" ></Label>
+                        <ProgressBar  ProgressColor="#66B6B6" VerticalOptions="EndAndExpand" Progress="0.6" Scale="1"  ></ProgressBar>
+                    </StackLayout>
+                </cardView:CardView.CardViewContent>
+            </cardView:CardView>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

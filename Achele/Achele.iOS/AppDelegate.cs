@@ -4,6 +4,7 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using Xfx;
 
 namespace Achele.iOS
 {
@@ -22,6 +23,7 @@ namespace Achele.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            XfxControls.Init();
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
