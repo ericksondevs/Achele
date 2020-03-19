@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Achele.Android", "Achele\Ac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Achele.iOS", "Achele\Achele.iOS\Achele.iOS.csproj", "{D939E964-9A66-42B7-86D8-8C5AC3C69BCC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Achele", "Achele\Achele\Achele.csproj", "{43FF445A-7FA5-4797-9658-06CF0DA4C36C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Achele", "Achele\Achele\Achele.csproj", "{43FF445A-7FA5-4797-9658-06CF0DA4C36C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

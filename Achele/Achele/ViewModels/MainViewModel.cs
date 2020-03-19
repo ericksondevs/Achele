@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Xamarin.Forms;
 
 namespace Achele.ViewModels
 {
@@ -16,6 +17,7 @@ namespace Achele.ViewModels
         {
             instance = this;
             this.Login = new LoginViewModel();
+            this.Register = new RegisterViewModel();
         }
         #endregion
 

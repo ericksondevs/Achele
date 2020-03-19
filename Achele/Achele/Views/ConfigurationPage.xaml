@@ -33,7 +33,7 @@
                 </StackLayout>
             </StackLayout>
 
-            <Button  BackgroundColor="#D5D5D5" TextColor="#FFFFFF"  VerticalOptions="EndAndExpand"  BorderRadius="10"  WidthRequest="254" HeightRequest="40" HorizontalOptions="Center" Text="Continue"></Button>
+            <Button  Style="{DynamicResource Aceptar}" VerticalOptions="EndAndExpand" WidthRequest="254" HeightRequest="40" HorizontalOptions="Center" Text="Continue"></Button>
 
         </StackLayout>
     </ContentPage.Content>

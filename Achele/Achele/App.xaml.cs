@@ -16,7 +16,7 @@ namespace Achele
 			InitializeComponent();
 
 
-			MainPage = new HomePage();
+			MainPage = new TabbedLoginPage();
 		}
 
 		protected override void OnStart ()

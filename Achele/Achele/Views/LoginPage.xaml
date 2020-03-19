@@ -2,25 +2,31 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Achele.Views.LoginPage"
-             xmlns:xfx="clr-namespace:Xfx;assembly=Xfx.Controls" Title="Login" 
+             xmlns:xfx="clr-namespace:Xfx;assembly=Xfx.Controls" Title="Login"  BindingContext="{Binding Main, Source={StaticResource Locator}}"
              >
     <ContentPage.Content>
-        <StackLayout>
-            <StackLayout Margin="50,15,50,15">
+        <StackLayout BindingContext="{Binding Login}">
+            <StackLayout VerticalOptions="CenterAndExpand" Margin="50,0,50,50">
 
-                <Entry Placeholder="User name or Email" PlaceholderColor="#ACACAC" VerticalOptions="CenterAndExpand"  BackgroundColor="#FFFFFF" ></Entry>
+                <Image Source="Achele_logo" VerticalOptions="Start"  WidthRequest="100.75" HeightRequest="125.51" />
 
-                <Entry Placeholder="Password"  IsPassword="True" PlaceholderColor="#ACACAC" VerticalOptions="CenterAndExpand"  BackgroundColor="#FFFFFF"> </Entry>
+                <Entry Placeholder="User name or Email" PlaceholderColor="#ACACAC" VerticalOptions="CenterAndExpand" ></Entry>
+
+                <Entry Placeholder="Password"  IsPassword="True" PlaceholderColor="#ACACAC" VerticalOptions="CenterAndExpand"  > </Entry>
+
+                <Label Text="Forgot Password?" Style="{DynamicResource Parraf}"  VerticalOptions="CenterAndExpand"  HorizontalOptions="EndAndExpand" ></Label>
+
+                <Button Text="Login" FontSize="14" Command="{Binding SaveUserCommand}"  TextColor="#FFFFFF" BorderRadius="5" Margin="0,15,0,0" BackgroundColor="#66B6B6" ></Button>
+
                 
-                <Label Text="Forgot Password?" FontSize="11" TextColor="#ACACAC" VerticalOptions="CenterAndExpand"  HorizontalOptions="EndAndExpand" ></Label>
+                <BoxView HeightRequest="1" WidthRequest="1"  BackgroundColor="#D5D5D5"  VerticalOptions="End" ></BoxView>
 
-                <Button Text="Login" FontSize="14"  TextColor="#FFFFFF" BorderRadius="5" Margin="0,15,0,0" BackgroundColor="#66B6B6" ></Button>
+                <Label Style="{DynamicResource Parraf}" HorizontalOptions="CenterAndExpand" VerticalOptions="End"  Text="Or" ></Label>
 
-                <Label TextColor="#ACACAC" FontSize="11" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"  Text="Or" ></Label>
-                <StackLayout VerticalOptions="EndAndExpand">
-                    <StackLayout HorizontalOptions="CenterAndExpand"  Spacing="25" Orientation="Horizontal"   >
+                <StackLayout VerticalOptions="End" >
+                    <StackLayout HorizontalOptions="CenterAndExpand"  Spacing="25" Orientation="Horizontal"  >
 
-                        <Image Source="googlelogo"   HorizontalOptions="StartAndExpand"  />
+                        <Image Source="googlelogo"   HorizontalOptions="StartAndExpand"    />
 
                 </StackLayout>
                 </StackLayout>

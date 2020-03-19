@@ -10,9 +10,10 @@
         </ResourceDictionary>
         
         <StyleSheetExtension Source="/Assets/CustomStyles.css"></StyleSheetExtension>
-		<ResourceDictionary>
-            
+        <ResourceDictionary>
+
             <OnPlatform x:Key="FontFamilyName" x:TypeArguments="x:String" iOS="MarkerFelt-Thin" Android="Roboto" WinPhone="Segoe UI" />
+
             <Style x:Key="FontLabel" TargetType="Label">
                 <Setter Property="FontFamily" Value="{DynamicResource FontFamilyName}" />
             </Style>
@@ -22,7 +23,36 @@
             <Style TargetType="NavigationPage">
                 <Setter Property="BarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
                 <Setter Property="BarTextColor" Value="White" />
+                <Setter x:Uid="Textbox" Property="BackgroundColor" Value="Accent">
+                </Setter>
             </Style>
+
+            <!--Boton Aceptar-->
+            <Style TargetType="Button" x:Key="Aceptar">
+                <Setter Property="BackgroundColor" Value="#66B6B6"  />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BorderRadius" Value="10"/>
+                <Setter Property="FontFamily" Value="{DynamicResource FontFamilyName}" />
+            </Style>
+
+            <!--Titulo-->
+            <Style TargetType="Label" x:Key="Title">
+                <Setter Property="TextColor" Value="#686C73" />
+                <Setter Property="FontSize" Value="Title" />
+                <Setter Property="FontFamily" Value="{DynamicResource FontFamilyName}" />
+            </Style>
+
+            <!--Parrafo-->
+            <Style TargetType="Label" x:Key="Parraf">
+                <Setter Property="TextColor" Value="#8C939C" />
+                <Setter Property="FontSize" Value="Caption" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="FontFamily" Value="{DynamicResource FontFamilyName}" />
+            </Style>
+
+            
+            
         </ResourceDictionary>
 	</Application.Resources>
 </Application>

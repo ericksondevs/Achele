@@ -2,22 +2,23 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Achele.Views.RegisterPage" 
-             BindingContext="{Binding Main, Source={StaticResource Locator}}" >
+             BindingContext="{Binding Main, Source={StaticResource Locator}}" Title="Register" >
 
     <ContentPage.Content>
-    <ScrollView BindingContext="{Binding Register}">
-        
-    <StackLayout Margin="50,15,50,15">
+    <ScrollView >
 
-        <Entry Text="{Binding LastName}"  Placeholder="User name" PlaceholderColor="#ACACAC" VerticalOptions="CenterAndExpand"  BackgroundColor="#FFFFFF"  />
+            <StackLayout Margin="50,0,50,50" BindingContext="{Binding Register}">
+                <Image Source="Welcomen_ilus" VerticalOptions="CenterAndExpand" WidthRequest="157.75" HeightRequest="240.51" />
 
-        <Entry Text="{Binding Email}" Placeholder="Email" PlaceholderColor="#ACACAC" VerticalOptions="CenterAndExpand"  BackgroundColor="#FFFFFF"  />
+                <Entry Text="{Binding UserName}"  Placeholder="User name" PlaceholderColor="#ACACAC" VerticalOptions="CenterAndExpand"   />
 
-        <Entry Text="{Binding Password}" Placeholder="Password" IsPassword="True" PlaceholderColor="#ACACAC" VerticalOptions="CenterAndExpand"  BackgroundColor="#FFFFFF"  />
+        <Entry Text="{Binding Email}" Placeholder="Email" PlaceholderColor="#ACACAC" VerticalOptions="CenterAndExpand"   />
 
-        <Entry Text="{Binding ConfirmPassword}" Placeholder="Verify password"  IsPassword="True" PlaceholderColor="#ACACAC" VerticalOptions="CenterAndExpand"  BackgroundColor="#FFFFFF"  />
+        <Entry Text="{Binding Password}" Placeholder="Password" IsPassword="True" PlaceholderColor="#ACACAC" VerticalOptions="CenterAndExpand"  />
 
-        <Button Command="{Binding saveUserCommand}" Text="Sign up" FontSize="14" TextColor="#FFFFFF" BorderRadius="5" Margin="0,15,0,0" BackgroundColor="#66B6B6" ></Button>
+        <Entry Text="{Binding ConfirmPassword}" Placeholder="Verify password"  IsPassword="True" PlaceholderColor="#ACACAC" VerticalOptions="CenterAndExpand"    />
+
+        <Button Style="{DynamicResource Aceptar}" Command="{Binding SaveUserCommand}"  Text="Sign up" FontSize="14" TextColor="#FFFFFF" BorderRadius="5" Margin="0,15,0,0" ></Button>
 
     </StackLayout>
     </ScrollView>

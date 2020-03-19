@@ -1,6 +1,7 @@
 ﻿
 using Achele.Infraestructure;
 using Achele.Models;
+using Achele.Views;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -18,22 +19,26 @@ namespace Achele.ViewModels
         #region Properties
         public string UserName
         {
-            get; set;
+            get { return this.username; }
+            set { SetValue(ref this.username, value); }
         }
 
         public string Password
         {
-            get; set;
+            get { return this.password; }
+            set { SetValue(ref this.password, value); }
         }
 
         public string ConfirmPassword
         {
-            get; set;
+            get { return this.confirmPassword; }
+            set { SetValue(ref this.confirmPassword, value); }
         }
 
         public string Email
         {
-            get; set;
+            get { return this.email; }
+            set { SetValue(ref this.email, value); }
         }
         #endregion
 
@@ -46,6 +51,11 @@ namespace Achele.ViewModels
         }
         #endregion
 
+        #region Constructor
+        public RegisterViewModel()
+        {
+        }
+        #endregion
 
         #region Methods
         void SaveUser()
@@ -61,6 +71,8 @@ namespace Achele.ViewModels
                 };
 
                 App.Database.userService.Insert(user);
+
+                App.Current.MainPage.Navigation.PushAsync(new HomePage());
             }
         }
 
@@ -78,15 +90,21 @@ namespace Achele.ViewModels
                 return false;
             }
 
-            if (string.IsNullOrEmpty(this.Password))
+            if (string.IsNullOrEmpty(this.ConfirmPassword))
             {
-                App.Current.MainPage.DisplayAlert("Error", "EL campo contraseña es obligatorio", "Cancelar");
+                App.Current.MainPage.DisplayAlert("Error", "EL campo contraseña de confirmación es obligatoria", "Cancelar");
                 return false;
             }
 
             if (this.Password != this.ConfirmPassword)
             {
-                App.Current.MainPage.DisplayAlert("Error", "la contraseñas no coinciden", "Cancelar");
+                App.Current.MainPage.DisplayAlert("Error", "Las contraseñas no coinciden", "Cancelar");
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(this.Email))
+            {
+                App.Current.MainPage.DisplayAlert("Error", "EL correo es obligatorio", "Cancelar");
                 return false;
             }
 

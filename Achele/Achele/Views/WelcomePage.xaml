@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Achele.Views.WelcomePage" Title="Probando">
+             x:Class="Achele.Views.WelcomePage" Title="Welcome">
     <ContentPage.Content>
 
         <StackLayout Margin="15,15,15,15">
             <Image Source="Welcomen_ilus" VerticalOptions="CenterAndExpand" WidthRequest="157.75" HeightRequest="240.51" />
-            <Label Text="Welcome to Achele" VerticalOptions="Center"  TextColor="#323232"  Style="{DynamicResource FontLabel}" FontSize="Large"  HorizontalOptions="CenterAndExpand"></Label>
+            <Label Text="Welcome to Achele" Style="{DynamicResource Title}" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand" ></Label>
 
-            <Label TextColor="#838383" HorizontalTextAlignment="Center" LineBreakMode="WordWrap" Text="Achele App. Keep track of your money and take advantages everywhere. Manage the day-to-day expenses of one or with your friends."
+            <Label TextColor="#838383" HorizontalTextAlignment="Center" Style="{DynamicResource Parraf}" Text="Achele App. Keep track of your money and take advantages everywhere. Manage the day-to-day expenses of one or with your friends."
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-            <Button BorderRadius="10"  WidthRequest="254" HeightRequest="40" VerticalOptions="CenterAndExpand"  HorizontalOptions="Center" Text="Get Started" TextColor="#FFFFFF"  StyleClass="DefaultButtom" ></Button>
+            <Button Style="{DynamicResource Aceptar}" WidthRequest="254" HeightRequest="40" VerticalOptions="CenterAndExpand"  HorizontalOptions="Center" Text="Get Started" />
         </StackLayout>
         
     </ContentPage.Content>
