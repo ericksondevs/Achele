@@ -1,12 +1,11 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using Achele.Data;
 using Achele.Views;
-using Xamarin.Forms.Xaml;
-using SQLitePCL;
-using Achele.Data;
+using System;
 using System.IO;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
-[assembly: XamlCompilation (XamlCompilationOptions.Compile)]
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Achele
 {
     public partial class App : Application
@@ -16,7 +15,7 @@ namespace Achele
 			InitializeComponent();
 
 
-			MainPage = new TabbedLoginPage();
+			MainPage = new NavigationPage(new TabbedLoginPage());
 		}
 
 		protected override void OnStart ()

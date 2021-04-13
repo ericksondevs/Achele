@@ -6,7 +6,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Xfx;
-using CarouselView.FormsPlugin.Android;
+using CarouselView.FormsPlugin.Droid;
 
 namespace Achele.Droid
 {

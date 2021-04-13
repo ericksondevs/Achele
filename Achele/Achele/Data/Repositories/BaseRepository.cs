@@ -3,7 +3,6 @@ using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Achele.Data.Repositories
@@ -12,7 +11,7 @@ namespace Achele.Data.Repositories
     {
         private SQLiteAsyncConnection db;
 
-        public BaseRepository(SQLiteAsyncConnection db)
+        public  BaseRepository(SQLiteAsyncConnection db)
         {
             this.db = db;
         }

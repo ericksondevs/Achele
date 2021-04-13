@@ -2,8 +2,9 @@
 using Achele.Infraestructure;
 using Achele.Models;
 using Achele.Views;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Windows.Input;
-using Xamarin.Forms;
 
 namespace Achele.ViewModels
 {
@@ -58,7 +59,7 @@ namespace Achele.ViewModels
         #endregion
 
         #region Methods
-        void SaveUser()
+        async void SaveUser()
         {
             if (FieldsValid())
             {
@@ -70,9 +71,11 @@ namespace Achele.ViewModels
 
                 };
 
-                App.Database.userService.Insert(user);
+                var tasks = new List<Task>();
 
-                App.Current.MainPage.Navigation.PushAsync(new HomePage());
+                tasks.Add(App.Database.userService.Insert(user));
+                tasks.Add(App.Current.MainPage.Navigation.PushAsync(new HomePage()));
+                await Task.WhenAll(tasks);
             }
         }
 
